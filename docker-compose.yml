@@ -1,0 +1,44 @@
+services:
+  localhost:
+    image: postgres:latest
+    container_name: db_luminaries
+    environment:
+      POSTGRES_USER: data_luminaries
+      POSTGRES_PASSWORD: secretPassw0rd
+      POSTGRES_DB: student_data
+    ports:
+      - "5434:5432"
+    volumes:
+      - ./pg_data:/var/lib/postgresql/data
+      - ./data:/data 
+      - ./infrascripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "data_luminaries"]
+      interval: 10s
+      retries: 5
+      start_period: 5s
+    restart: always
+  # pgadmin:
+
+  #   image: dpage/pgadmin4:latest
+
+  #   container_name: Capstone_my_pgadmin_container
+
+  #   restart: always
+
+  #   environment:
+
+  #     PGADMIN_DEFAULT_EMAIL: admin@admin.com
+
+  #     PGADMIN_DEFAULT_PASSWORD: _admin
+
+  #   ports:
+
+  #     - "5002:80"
+
+  #   depends_on:
+
+  #     db:
+
+  #       condition: service_healthy
+  
