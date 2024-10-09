@@ -16,7 +16,7 @@ pip install streamlit
 
 ## Demo
 
-You can access the live demo of the app here: [Academic Performance Prediction App](https://studentmodelapp-prediction.streamlit.app/)
+You can access the live demo of the app here: [Academic Performance Prediction App](https://dataluminaries.streamlit.app/Academic_Prediction_App)
 
 ## Running the App
 
