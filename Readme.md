@@ -50,3 +50,6 @@ The Schema defines the columns 'created_time', 'Age', 'Gender', 'average_househo
        'extracurricular_activities', 'study_satasifaction',
        'last_academic_performance', 'exam_prep_challenges', 'recommendations'
 
+click the link below👇🏾 to see full project
+https://dataluminaries.streamlit.app/
+
